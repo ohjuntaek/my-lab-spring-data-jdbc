@@ -31,8 +31,8 @@ public class CustomerConfig extends AbstractJdbcConfiguration {
     DataSource dataSource() {
         return new EmbeddedDatabaseBuilder()
                 .generateUniqueName(true)
-                .setType(EmbeddedDatabaseType.HSQL)
-                .addScript("create-customer-schema.sql")
+                .setType(EmbeddedDatabaseType.H2)
+                .addScript("schema.sql")
                 .build();
     }
 }
